@@ -1,3 +1,11 @@
+:root {
+  --brand-gradient: linear-gradient(
+    90deg,
+    #f97316,
+    #ec4899,
+    #8b5cf6
+  );
+}
 nav {
   position: sticky;
   top: 0;
@@ -41,7 +49,7 @@ nav button {
 nav button:last-child {
   color: white;
   border-radius: 25px;
-  background: linear-gradient(90deg, #ff8a00, #ff0080, #7b2cff);
+  background: var(--brand-gradient);
 }
 
 
@@ -64,7 +72,7 @@ nav button:last-child {
 }
 
 .hero h1 span {
-  background: linear-gradient(90deg, #ff8a00, #ff0080, #7b2cff);
+  background: var(--brand-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -92,7 +100,7 @@ nav button:last-child {
 .hero-buttons button:first-child {
   color: white;
   border: none;
-  background: linear-gradient(90deg, #ff8a00, #ff0080, #7b2cff);
+  background: var(--brand-gradient);
 }
 
 .hero-buttons button:last-child {
@@ -303,4 +311,14 @@ nav button:last-child {
   color: #ef4444;
   cursor: pointer;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .stack-layout {
+    grid-template-columns: 1fr;
+  }
+}
+.add-stack-btn:disabled {
+  background: #e5e7eb;
+  color: #94a3b8;
+  cursor: not-allowed;
 }
