@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "category": "Frontend",
+    "description": "The standard markup language for creating web pages.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner",
+    "badge": "Essential"
+  },
+  {
+    "id": 2,
+    "name": "CSS",
+    "category": "Frontend",
+    "description": "A stylesheet language used to design and style web pages.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    "rating": 4.7,
+    "difficulty": "Beginner",
+    "badge": "Essential"
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "category": "Frontend",
+    "description": "A programming language that makes websites interactive.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 4,
+    "name": "React",
+    "category": "Frontend",
+    "description": "A JavaScript library for building user interfaces.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 5,
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "description": "A utility-first CSS framework for building modern interfaces.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    "rating": 4.7,
+    "difficulty": "Intermediate",
+    "badge": "Trending"
+  },
+  {
+    "id": 6,
+    "name": "Node.js",
+    "category": "Backend",
+    "description": "A JavaScript runtime for building server-side applications.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 7,
+    "name": "Express.js",
+    "category": "Backend",
+    "description": "A lightweight Node.js framework for building web servers and APIs.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    "rating": 4.6,
+    "difficulty": "Intermediate",
+    "badge": "Essential"
+  },
+  {
+    "id": 8,
+    "name": "MongoDB",
+    "category": "Database",
+    "description": "A NoSQL database designed for flexible and scalable applications.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    "rating": 4.7,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 9,
+    "name": "Git",
+    "category": "Tools",
+    "description": "A distributed version control system for tracking code changes.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner",
+    "badge": "Essential"
+  },
+  {
+    "id": 10,
+    "name": "GitHub",
+    "category": "Tools",
+    "description": "A platform for hosting code and collaborating on software projects.",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner",
+    "badge": "Essential"
+  }
+]
