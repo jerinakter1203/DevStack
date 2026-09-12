@@ -11,9 +11,11 @@ import YourStack from "./components/YourStack";
 function App() {
     const [techData, setTechData] = useState([]);
     const [selectedStack, setSelectedStack] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
   setTechData(technologies);
+   setLoading(false);
 }, []);
 
 const handleAddToStack = (technology) => {
@@ -63,16 +65,20 @@ const handleRemoveAll = () => {
 
   <div className="stack-layout">
 
+  {loading ? (
+  <p>Loading...</p>
+) : (
   <div className="technology-card-container">
     {techData.map((tech) => (
       <TechnologyCard
-  key={tech.id}
-  technology={tech}
-  onAddToStack={handleAddToStack}
-  selectedStack={selectedStack}
-/>
+        key={tech.id}
+        technology={tech}
+        onAddToStack={handleAddToStack}
+        selectedStack={selectedStack}
+      />
     ))}
   </div>
+)}
 
  <YourStack
   selectedStack={selectedStack}
