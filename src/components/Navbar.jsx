@@ -1,9 +1,20 @@
+import { useState } from "react";
+
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav>
-        <img src="/src/assets/logo-text.png" alt="" />
+      <button
+        className="menu-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
 
-      <div>
+      <img src="/src/assets/logo-text.png" alt="Dev Stack" />
+
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <a href="#">Home</a>
         <a href="#">Technologies</a>
         <a href="#">Projects</a>
@@ -11,7 +22,7 @@ function Navbar() {
         <a href="#">Contact</a>
       </div>
 
-      <div>
+      <div className="nav-buttons">
         <button>Sign In</button>
         <button>Sign Up</button>
       </div>

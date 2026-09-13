@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import technologies from "./data/technologies.json";
 import TechnologyCard from "./components/TechnologyCard";
 import YourStack from "./components/YourStack";
+import Footer from "./components/Footer";
 
 function App() {
     const [techData, setTechData] = useState([]);
@@ -58,10 +59,13 @@ const handleRemoveAll = () => {
     <ToastContainer />
       <Navbar />
       <Hero/>
-      <p>Total Technologies: {techData.length}</p>
      <section className="dev-stack">
-  <h1>Dev Stack</h1>
-  <p>Build Your Ideal Development Stack</p>
+
+  <h1>Explore the Technologies</h1>
+
+  <p>
+    Pick one technology per category to build your ideal stack.
+  </p>
 
   <div className="stack-layout">
 
@@ -88,6 +92,7 @@ const handleRemoveAll = () => {
 
 </div>
 </section>
+<Footer />
     </>
   );
 }
