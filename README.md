@@ -1,16 +1,156 @@
-# React + Vite
+# Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dev Stack is a responsive React website where developers can explore different
+web development technologies and build their own development stack.
 
-Currently, two official plugins are available:
+Users can view technology information, add technologies to their stack,
+remove individual technologies, or remove all selected technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
 
-## React Compiler
+- React.js
+- JavaScript (ES6+)
+- CSS
+- JSON
+- React Toastify
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+1. Explore different development technologies with their category, difficulty,
+   rating, description, and badge.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Add technologies to a personal "Your Stack" section and prevent duplicate
+   technologies from being added.
+
+3. Remove individual technologies or clear the entire stack with toast
+   notifications.
+
+---
+
+# React Questions & Answers
+
+## 1. What is JSX, and why is it used in React?
+
+JSX stands for JavaScript XML. It allows us to write HTML-like code inside
+JavaScript.
+
+React uses JSX because it makes the UI code easier to write and understand.
+
+---
+
+## 2. What is the difference between props and state?
+
+Props are data passed from a parent component to a child component.
+
+State is data managed inside a component that can change over time.
+
+Props are mainly used to pass data, while state is used to manage changing
+data.
+
+---
+
+## 3. What does the `useState` hook do, and where did you use it in this project?
+
+`useState` is a React Hook used to create and manage changing data inside a
+component.
+
+I used `useState` to manage:
+
+- Technology data
+- Selected technologies in "Your Stack"
+- Loading state
+
+For example:
+
+```jsx
+const [selectedStack, setSelectedStack] = useState([]);
+
+
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+
+useEffect is a React Hook used to perform side effects in a component.
+
+I used useEffect to load the technology data from the JSON file when the
+component starts.
+
+Example:
+
+useEffect(() => {
+  setTechData(technologies);
+  setLoading(false);
+}, []);
+
+The empty [] means the effect runs when the component is loaded.
+
+5. Why does every item in a .map() list need a unique key prop?
+
+React needs a unique key to identify each item in a list.
+
+It helps React understand which item has changed, been added, or removed.
+
+Example:
+
+{techData.map((tech) => (
+  <TechnologyCard
+    key={tech.id}
+    technology={tech}
+  />
+))}
+
+Here, tech.id is the unique key.
+
+6. What is conditional rendering? Show one place you used it.
+
+Conditional rendering means showing different UI based on a condition.
+
+I used it in the "Your Stack" section.
+
+When no technology is selected, it shows:
+
+{selectedStack.length === 0 ? (
+  <div className="empty-stack">
+    <p>Your stack is empty.</p>
+  </div>
+) : (
+  <div className="stack-items">
+    {selectedStack.map((tech) => (
+      // stack items
+    ))}
+  </div>
+)}
+
+So, if the stack is empty, the empty message is shown. Otherwise, the selected
+technologies are displayed.
+
+7. How do you pass data from a parent component to a child component,
+
+and how does a child send something back to the parent?
+
+A parent component can pass data to a child using props.
+
+For example:
+
+<TechnologyCard
+  technology={tech}
+  selectedStack={selectedStack}
+/>
+
+Here, technology and selectedStack are passed from the parent to the
+child.
+
+A child can send something back to the parent by calling a function that the
+parent passes as a prop.
+
+For example:
+
+<TechnologyCard
+  technology={tech}
+  onAddToStack={handleAddToStack}
+/>
+
+The child calls:
+
+onAddToStack(technology);
+
+This sends the selected technology back to the parent function.
