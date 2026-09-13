@@ -1,8 +1,12 @@
 function Footer() {
   return (
     <footer className="footer">
+
       <div className="footer-brand">
-        <h2>Dev Stack</h2>
+
+        <div>
+        <img src="/src/assets/logo-text.png" alt="Dev Stack" />
+        </div>
 
         <p>
           Build and explore your ideal development stack
@@ -10,13 +14,15 @@ function Footer() {
         </p>
 
         <div className="footer-socials">
-          <a href="#">Facebook</a>
           <a href="#">GitHub</a>
+          <a href="#">Twitter</a>
           <a href="#">LinkedIn</a>
         </div>
+
       </div>
 
       <div className="footer-links">
+
         <div>
           <h3>Product</h3>
           <a href="#">Technologies</a>
@@ -36,16 +42,20 @@ function Footer() {
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
         </div>
+
       </div>
 
       <div className="footer-bottom">
+
         <p>© 2026 Dev Stack. All rights reserved.</p>
 
         <div>
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
         </div>
+
       </div>
+
     </footer>
   );
 }
