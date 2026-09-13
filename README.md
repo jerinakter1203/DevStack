@@ -59,7 +59,7 @@ For example:
 
 ```jsx
 const [selectedStack, setSelectedStack] = useState([]);
-
+```
 ---
 
 
@@ -70,12 +70,12 @@ useEffect is a React Hook used to perform side effects in a component.
 I used useEffect to load the technology data from the JSON file when the component starts.
 
 Example:
-
+```jsx
 useEffect(() => {
   setTechData(technologies);
   setLoading(false);
 }, []);
-
+```
 The empty [] means the effect runs when the component is loaded.
 
 ---
@@ -87,14 +87,14 @@ React needs a unique key to identify each item in a list.
 It helps React understand which item has changed, been added, or removed.
 
 Example:
-
+```jsx
 {techData.map((tech) => (
   <TechnologyCard
     key={tech.id}
     technology={tech}
   />
 ))}
-
+```
 Here, tech.id is the unique key.
 
 ---
@@ -106,7 +106,7 @@ Conditional rendering means showing different UI based on a condition.
 I used it in the "Your Stack" section.
 
 When no technology is selected, it shows:
-
+```jsx
 {selectedStack.length === 0 ? (
   <div className="empty-stack">
     <p>Your stack is empty.</p>
@@ -117,7 +117,7 @@ When no technology is selected, it shows:
     ))}
   </div>
 )}
-
+```
 So, if the stack is empty, the empty message is shown. Otherwise, the selected
 technologies are displayed.
 
@@ -128,29 +128,27 @@ technologies are displayed.
 A parent component can pass data to a child using props.
 
 For example:
-
+```jsx
 <TechnologyCard
   technology={tech}
   selectedStack={selectedStack}
 />
-
----
+```
 
 Here, technology and selectedStack are passed from the parent to the
 child.
 
-A child can send something back to the parent by calling a function that the
-parent passes as a prop.
+A child can send something back to the parent by calling a function that the parent passes as a prop.
 
 For example:
----
+```jsx
 <TechnologyCard
   technology={tech}
   onAddToStack={handleAddToStack}
 />
----
+```
 The child calls:
-
+```jsx
 onAddToStack(technology);
-
+```
 This sends the selected technology back to the parent function.
